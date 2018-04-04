@@ -27,6 +27,27 @@ export default class Base extends Component {
     };
   }
 
+  componentDidMount() {
+    window.hypothesisConfig = () => {
+      return {
+        "theme": "clean",
+        "onLayoutChange": (sidebarInfo) => {
+          if (sidebarInfo.expanded) {
+            this.setState({open: true});
+          }
+        },
+        "externalContainerSelector": "#hypothesis-root"
+      };
+    };
+
+    const script = document.createElement("script");
+
+    script.src = "http://localhost:5000/embed.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+  }
+
   handleToggle = () => {
     this.setState({open: !this.state.open});
   };
