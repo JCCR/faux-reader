@@ -41,6 +41,8 @@
   };
 
   var clickHandler = function(e) {
+    // disable for now
+    return;
     var clickX = e.pageX;
     e.preventDefault();
     console.log("Click detected at: "+clickX);
