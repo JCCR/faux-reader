@@ -1,0 +1,22 @@
+.annotator-drawer > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.annotator-tabs {
+  display: flex;
+  flex:1;
+  flex-direction: column;
+}
+
+.annotator-tabs :nth-child(3),
+.annotator-tabs[value=hypothesis] :nth-child(3) div {
+  height: 100%;
+  overflow: hidden;
+}
+
+#hypothesis-root iframe[name=hyp_sidebar_frame] {
+  border: none;
+  width: 100%;
+  height: 100%;
+}

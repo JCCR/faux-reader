@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import './Base.css';
+
 import {
   AppBar,
   Card,
@@ -39,6 +41,7 @@ export default class Base extends Component {
     return (
       <div>
         <Drawer
+          className="annotator-drawer"
           width={400}
           open={this.state.open}
         >
@@ -47,51 +50,50 @@ export default class Base extends Component {
             iconElementLeft={<IconButton onClick={this.handleToggle}><NavigationClose/></IconButton>}
           />
           <Tabs
+            className="annotator-tabs"
             value={this.state.value}
             onChange={this.handleChange}
           >
-            <Tab label="Hypothes.is" value="hypothesis">
+            <Tab className="hypothesis-tab" label="Hypothes.is" value="hypothesis">
               <div id="hypothesis-root"/>
             </Tab>
             <Tab label="Faux Notes" value="other">
               <div style={{padding: '0 0.5em'}}>
-                <p>
-                  <Card>
-                    <CardHeader
-                      title="Juan Corona"
-                      subtitle="Public"
-                      avatar={"https://gravatar.com/avatar/116efe9aa8b93a8a002bd2b0df033161"}
-                    />
-                    <CardText>
-                      Inserting pseudo latin text in 3.. 2.. 1..
-                      <br/>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-                      Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-                      Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-                    </CardText>
-                    <CardActions>
-                      <FlatButton label="Reply"/>
-                      <FlatButton label="Share"/>
-                    </CardActions>
-                  </Card>
-                </p>
-                <p>
-                  <Card>
-                    <CardHeader
-                      title="Juan Corona"
-                      subtitle="Public"
-                      avatar={"https://gravatar.com/avatar/116efe9aa8b93a8a002bd2b0df033161"}
-                    />
-                    <CardText>
-                      I like turtles.
-                    </CardText>
-                    <CardActions>
-                      <FlatButton label="Reply"/>
-                      <FlatButton label="Share"/>
-                    </CardActions>
-                  </Card>
-                </p>
+                <br/>
+                <Card>
+                  <CardHeader
+                    title="Juan Corona"
+                    subtitle="Public"
+                    avatar={"https://gravatar.com/avatar/116efe9aa8b93a8a002bd2b0df033161"}
+                  />
+                  <CardText>
+                    Inserting pseudo latin text in 3.. 2.. 1..
+                    <br/>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+                    Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
+                    Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+                  </CardText>
+                  <CardActions>
+                    <FlatButton label="Reply"/>
+                    <FlatButton label="Share"/>
+                  </CardActions>
+                </Card>
+                <br/>
+                <Card>
+                  <CardHeader
+                    title="Juan Corona"
+                    subtitle="Public"
+                    avatar={"https://gravatar.com/avatar/116efe9aa8b93a8a002bd2b0df033161"}
+                  />
+                  <CardText>
+                    I like turtles.
+                  </CardText>
+                  <CardActions>
+                    <FlatButton label="Reply"/>
+                    <FlatButton label="Share"/>
+                  </CardActions>
+                </Card>
               </div>
             </Tab>
           </Tabs>
